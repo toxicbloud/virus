@@ -3,4 +3,5 @@ public interface Virus{
     public int getResistance();
     public String[] getModeDeTransmission();
     public String toString();
+    public String getNom();
 }

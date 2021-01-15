@@ -2,6 +2,7 @@ public class Covid19 implements Virus {
     private int dgts;
     private int resistance;
     private String[] modesTrans;
+    private String nom;
 
     public Covid19(){
         this.dgts=10;
@@ -27,5 +28,9 @@ public class Covid19 implements Virus {
             retour+=modesTrans[i]+" ";
         }
         return retour;
+    }
+
+    public String getNom(){
+        return this.nom;
     }
 }

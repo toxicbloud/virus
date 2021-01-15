@@ -41,4 +41,29 @@ public class Humain implements Porteur {
         tmp[tmp.length-1]=va;
         this.v=tmp;
     }
+
+    public boolean supVirus(Virus va){
+        boolean retour=false;
+        boolean trouve=false;
+        int place=0;
+        int placeAsup=-1;
+        while(!trouve && place<v.length){
+            if(v[place].getNom()==va.getNom()){
+                trouve=true;
+                placeAsup=place;
+            }
+            place+=1;
+        }
+        if(placeAsup>=0){
+            v[placeAsup]=null;
+            Virus[] tmp = new Virus[v.length-1];
+            for(int i=0;i<v.length;i++){
+                if(v[i]!=null){
+                    tmp[i]=v[i];
+                }
+            }
+            v=tmp;
+        }
+        return retour;
+    }
 }
